@@ -1,0 +1,181 @@
+{
+  "menuItems": [
+    {
+      "id": "linear",
+      "title": "1. Linear Data Structures",
+      "description": "Structures where elements are arranged sequentially.",
+      "items": [
+        "Array",
+        "Dynamic Array (e.g., Vector, ArrayList)",
+        "Linked List",
+        "Doubly Linked List",
+        "Circular Linked List",
+        "Stack",
+        "Queue",
+        "Circular Queue",
+        "Deque (Double-ended queue)",
+        "Bit Array / Bit Vector",
+        "Gap Buffer",
+        "Zipper"
+      ]
+    },
+    {
+      "id": "hash",
+      "title": "2. Hash-Based Structures",
+      "description": "Use hashing functions for quick lookups and inserts.",
+      "items": [
+        "Hash Table / Hash Map",
+        "Hash Set",
+        "Multimap",
+        "Multiset (Bag)",
+        "Bloom Filter",
+        "LRU Cache (usually implemented with HashMap + LinkedList)",
+        "LFU Cache (uses HashMap + Heap or similar structures)"
+      ]
+    },
+    {
+      "id": "tree",
+      "title": "3. Tree-Based Structures",
+      "description": "Hierarchical data storage for fast searching, sorting, and indexing.",
+      "subcategories": [
+        {
+          "id": "general-trees",
+          "title": "General Trees",
+          "items": [
+            "Binary Tree",
+            "N-ary Tree",
+            "Trinary Tree",
+            "Ternary Search Tree",
+            "Expression Tree",
+            "Decision Tree",
+            "Game Tree"
+          ]
+        },
+        {
+          "id": "search-trees",
+          "title": "Search Trees",
+          "items": [
+            "Binary Search Tree (BST)",
+            "AVL Tree",
+            "Red-Black Tree",
+            "Splay Tree",
+            "Treap",
+            "B-Tree",
+            "B+ Tree",
+            "Order-Statistic Tree",
+            "Patricia Trie",
+            "Radix Tree"
+          ]
+        },
+        {
+          "id": "prefix-trees",
+          "title": "Prefix/Compressed Trees",
+          "items": [
+            "Trie (Prefix Tree)",
+            "Compressed Trie",
+            "Suffix Tree",
+            "Suffix Array",
+            "Aho-Corasick Automaton",
+            "Suffix Automaton"
+          ]
+        },
+        {
+          "id": "range-trees",
+          "title": "Range Query Trees",
+          "items": [
+            "Segment Tree",
+            "Fenwick Tree (Binary Indexed Tree)",
+            "Sparse Table",
+            "Range Tree",
+            "Interval Tree",
+            "Van Emde Boas Tree"
+          ]
+        },
+        {
+          "id": "spatial-trees",
+          "title": "Spatial Trees",
+          "items": [
+            "K-D Tree",
+            "Quadtree",
+            "Octree",
+            "R-Tree",
+            "Bounding Volume Hierarchy (BVH)"
+          ]
+        },
+        {
+          "id": "functional-trees",
+          "title": "Functional Trees / Persistent",
+          "items": ["Persistent Segment Tree", "Finger Tree"]
+        }
+      ]
+    },
+    {
+      "id": "heap",
+      "title": "4. Heap-Based Structures",
+      "description": "Specialized trees for priority operations.",
+      "items": [
+        "Min Heap / Max Heap",
+        "Binary Heap",
+        "Fibonacci Heap",
+        "Binomial Heap",
+        "Pairing Heap",
+        "Leftist Heap",
+        "Radix Heap",
+        "Double-Ended Priority Queue (DEPQ)"
+      ]
+    },
+    {
+      "id": "graph",
+      "title": "5. Graph-Based Structures",
+      "description": "Used to model networks, dependencies, and relationships.",
+      "items": [
+        "Graph (Adjacency List / Matrix)",
+        "Directed Graph",
+        "Undirected Graph",
+        "Weighted Graph",
+        "Multigraph",
+        "DAG (Directed Acyclic Graph)",
+        "Compressed Sparse Row (CSR)",
+        "Incidence Matrix / List"
+      ]
+    },
+    {
+      "id": "set",
+      "title": "6. Set-Based Structures",
+      "description": "Focus on uniqueness, membership, and fast operations.",
+      "items": ["Set / HashSet", "Multiset", "Bit Set", "Bloom Filter"]
+    },
+    {
+      "id": "specialized",
+      "title": "7. Specialized / Composite Structures",
+      "description": "These combine or optimize existing structures:",
+      "items": [
+        "Union-Find / Disjoint Set",
+        "Skip List",
+        "Rope (for efficiently editing large strings)",
+        "Dancing Links (DLX)",
+        "Zipper",
+        "Cuckoo Hashing Table",
+        "Deque with Min/Max",
+        "Circular Buffer",
+        "Compressed Suffix Tree / Array"
+      ]
+    },
+    {
+      "id": "adt",
+      "title": "8. Abstract Data Types (ADTs)",
+      "description": "Not concrete structures, but blueprints that can be implemented in various ways:",
+      "items": [
+        "List",
+        "Stack",
+        "Queue",
+        "Deque",
+        "Set",
+        "Map / Dictionary",
+        "Priority Queue",
+        "Graph ADT",
+        "Tree ADT"
+      ]
+    }
+  ]
+}
