@@ -13,7 +13,9 @@ import { ThemeToggle } from "./components/ThemeToggle";
 import { ThemeProvider } from "./context/ThemeContext";
 
 import type { LinksFunction } from "@remix-run/node";
+
 import "./tailwind.css";
+import { Footer } from "./components/Footer";
 
 export const links: LinksFunction = () => [
   ...(cssBundleHref ? [{ rel: "stylesheet", href: cssBundleHref }] : []),
@@ -28,12 +30,12 @@ export default function App() {
         <Meta />
         <Links />
       </head>
-      <body className="h-full bg-white dark:bg-gray-900">
+      <body className="h-full bg-emerald-50 dark:bg-emerald-1000">
         <ThemeProvider>
           <div className="flex h-full">
             <Menu />
             <main className="flex-1 overflow-auto">
-              <div className="animate-fadeIn">
+              <div className="animate-fadeIn mb-16">
                 <Outlet />
               </div>
             </main>
@@ -41,6 +43,7 @@ export default function App() {
           <ThemeToggle />
           <ScrollRestoration />
           <Scripts />
+          <Footer />
         </ThemeProvider>
       </body>
     </html>
@@ -66,7 +69,9 @@ export function ErrorBoundary() {
             </h1>
             <div className="bg-emerald-50 dark:bg-emerald-800 rounded p-4 mb-4">
               <p className="text-emerald-800 dark:text-emerald-100 font-mono text-sm">
-                {error instanceof Error ? error.message : "An unexpected error occurred"}
+                {error instanceof Error
+                  ? error.message
+                  : "An unexpected error occurred"}
               </p>
             </div>
             <a
