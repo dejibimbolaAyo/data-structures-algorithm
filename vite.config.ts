@@ -1,4 +1,5 @@
 import mdx from "@mdx-js/rollup";
+import { netlifyPlugin } from "@netlify/remix-adapter/plugin";
 import { vitePlugin as remix } from "@remix-run/dev";
 import remarkFrontmatter from "remark-frontmatter";
 import remarkGfm from "remark-gfm";
@@ -28,5 +29,6 @@ export default defineConfig({
       },
     }),
     tsconfigPaths(),
+    netlifyPlugin(),
   ],
 });
