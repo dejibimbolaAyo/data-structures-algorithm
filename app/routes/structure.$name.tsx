@@ -83,7 +83,7 @@ export default function Structure() {
   return (
     <div className="flex min-h-screen bg-emerald-50 dark:bg-emerald-1000">
       <main className="flex-1 p-4">
-        <div className="max-w-2xl mx-auto prose prose-xs sm:prose-sm dark:prose-invert prose-emerald prose-headings:font-medium prose-p:leading-snug prose-pre:bg-black prose-pre:text-emerald-100 prose-pre:border prose-pre:border-emerald-200/20 prose-table:border prose-table:border-emerald-200/20 prose-th:bg-emerald-100/50 dark:prose-th:bg-emerald-900/50 prose-th:border prose-th:border-emerald-200/20 prose-td:border prose-td:border-emerald-200/20 py-4 px-2">
+        <div className="max-w-2xl mx-auto prose prose-xs sm:prose-sm dark:prose-invert prose-emerald prose-headings:font-medium prose-p:leading-snug prose-pre:bg-black prose-pre:text-emerald-100 prose-pre:border prose-pre:border-emerald-200/20 prose-table:border prose-table:border-emerald-200/20 prose-th:bg-emerald-100/50 dark:prose-th:bg-emerald-900/50 prose-th:border prose-th:border-emerald-200/20 prose-td:border prose-td:border-emerald-200/20 py-4 pt-16 px-2">
           <Component components={components} />
         </div>
       </main>

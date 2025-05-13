@@ -1,5 +1,12 @@
 import { useState } from "react";
 
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from "@/components/ui/select";
 import { PerformanceTimeGraph } from "@/content/components/PerformanceTimeGraph";
 
 type TimePoint = { n: number; time: number };
@@ -38,19 +45,21 @@ export function OperationPerformanceGraph({
     <div className="space-y-4">
       <div className="flex gap-2 items-center">
         <span className="font-medium">Operation:</span>
-        <select
+        <Select
           value={selectedOp}
-          onChange={(e) =>
-            setSelectedOp(e.target.value as keyof typeof operationLabels)
-          }
-          className="border rounded px-2 py-1"
+          onValueChange={(v) => setSelectedOp(v as keyof typeof opData)}
         >
-          {Object.entries(operationLabels).map(([key, label]) => (
-            <option key={key} value={key}>
-              {label}
-            </option>
-          ))}
-        </select>
+          <SelectTrigger className="w-36">
+            <SelectValue />
+          </SelectTrigger>
+          <SelectContent>
+            {Object.entries(operationLabels).map(([key, label]) => (
+              <SelectItem key={key} value={key}>
+                {label}
+              </SelectItem>
+            ))}
+          </SelectContent>
+        </Select>
       </div>
       <PerformanceTimeGraph
         label={operationLabels[selectedOp]}

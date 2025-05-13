@@ -189,7 +189,7 @@ export function ArrayVisualizer({
             type="number"
             value={inputValue}
             onChange={(e) => setInputValue(e.target.value)}
-            className="border rounded px-2 py-1 w-20"
+            className="border rounded px-2 py-1 w-20 bg-zinc-100 dark:bg-zinc-900"
           />
         </div>
         <div>
@@ -198,7 +198,7 @@ export function ArrayVisualizer({
             type="number"
             value={inputIndex}
             onChange={(e) => setInputIndex(e.target.value)}
-            className="border rounded px-2 py-1 w-20"
+            className="border rounded px-2 py-1 w-20 bg-zinc-100 dark:bg-zinc-900"
           />
         </div>
         <button
