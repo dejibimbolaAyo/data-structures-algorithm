@@ -6,10 +6,11 @@ import {
   Outlet,
   Scripts,
   ScrollRestoration,
+  useRouteError,
 } from "@remix-run/react";
-import { ThemeProvider } from "@/context/ThemeContext";
-import { ThemeToggle } from "@/components/ThemeToggle";
-import { Menu } from "@/components/Menu";
+import { ThemeProvider } from "./context/ThemeContext";
+import { ThemeToggle } from "./components/ThemeToggle";
+import { Menu } from "./components/Menu";
 import "./tailwind.css";
 
 export const links: LinksFunction = () => [
@@ -39,6 +40,42 @@ export default function App() {
           <ScrollRestoration />
           <Scripts />
         </ThemeProvider>
+      </body>
+    </html>
+  );
+}
+
+export function ErrorBoundary() {
+  const error = useRouteError();
+  console.error(error);
+
+  return (
+    <html lang="en">
+      <head>
+        <title>Oh no!</title>
+        <Meta />
+        <Links />
+      </head>
+      <body className="h-full bg-emerald-50 dark:bg-emerald-1000">
+        <div className="min-h-screen flex items-center justify-center p-4">
+          <div className="bg-white dark:bg-emerald-900 rounded-lg shadow-xl p-8 max-w-lg w-full">
+            <h1 className="text-2xl font-bold text-emerald-900 dark:text-emerald-50 mb-4">
+              Oops! Something went wrong
+            </h1>
+            <div className="bg-emerald-50 dark:bg-emerald-800 rounded p-4 mb-4">
+              <p className="text-emerald-800 dark:text-emerald-100 font-mono text-sm">
+                {error instanceof Error ? error.message : "An unexpected error occurred"}
+              </p>
+            </div>
+            <a
+              href="/"
+              className="inline-block bg-emerald-600 hover:bg-emerald-700 text-white font-semibold py-2 px-4 rounded transition-colors"
+            >
+              Go back home
+            </a>
+          </div>
+        </div>
+        <Scripts />
       </body>
     </html>
   );

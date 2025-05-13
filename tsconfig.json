@@ -28,6 +28,7 @@
       "@components/*": ["./app/components/*"],
       "@routes/*": ["./app/routes/*"],
       "@data/*": ["./app/data/*"],
+      "@context/*": ["./app/context/*"]
     },
 
     // Remix takes care of building everything in `remix build`.

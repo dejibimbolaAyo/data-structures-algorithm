@@ -1,0 +1,59 @@
+---
+meta:
+  - title: My First Post
+  - name: description
+    content: Isn't this awesome?
+headers:
+  Cache-Control: no-cache
+---
+
+# Arrays
+
+A fixed-size collection of elements of the same type stored in contiguous memory locations.
+
+## Key Characteristics
+
+- **Fixed Size**: Size is determined at creation
+- **Contiguous Memory**: Elements are stored in adjacent memory locations
+- **Zero-based Indexing**: First element is at index 0
+- **Homogeneous**: All elements must be of the same type
+- **Random Access**: O(1) time complexity for accessing elements
+
+## Common Operations
+
+```typescript
+// Creating an array
+const numbers = new Array(5); // Creates an array of size 5
+const fruits = ["apple", "banana", "orange"]; // Array literal
+
+// Accessing elements
+const firstFruit = fruits[0]; // 'apple'
+
+// Modifying elements
+fruits[1] = "grape"; // ['apple', 'grape', 'orange']
+
+// Array length
+const length = fruits.length; // 3
+```
+
+## Time Complexity
+
+| Operation | Time Complexity |
+| --------- | --------------- |
+| Access    | O(1)            |
+| Search    | O(n)            |
+| Insertion | O(n)            |
+| Deletion  | O(n)            |
+
+## Space Complexity
+
+- **Worst Case**: O(n)
+- **Best Case**: O(1)
+
+## Applications
+
+1. **Data Storage**: Storing collections of related data
+2. **Buffer Management**: Managing fixed-size buffers
+3. **Matrix Operations**: Representing 2D data structures
+4. **String Operations**: Character arrays for string manipulation
+5. **Lookup Tables**: Fast access to pre-computed values

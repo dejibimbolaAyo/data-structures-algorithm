@@ -1,0 +1,85 @@
+# Dynamic Arrays
+
+A dynamic array is a data structure that can grow and shrink in size as needed. It provides the benefits of arrays (random access, cache locality) while allowing for flexible sizing.
+
+## Key Characteristics
+
+- **Resizable**: Can grow and shrink as needed
+- **Random Access**: O(1) time complexity for accessing elements
+- **Amortized Insertion**: O(1) amortized time complexity for insertion at the end
+- **Memory Efficiency**: Contiguous memory allocation
+
+## Common Operations
+
+```typescript
+class DynamicArray<T> {
+  private capacity: number;
+  private size: number;
+  private array: T[];
+
+  constructor(initialCapacity: number = 10) {
+    this.capacity = initialCapacity;
+    this.size = 0;
+    this.array = new Array(initialCapacity);
+  }
+
+  // Add element to the end
+  push(element: T): void {
+    if (this.size === this.capacity) {
+      this.resize();
+    }
+    this.array[this.size] = element;
+    this.size++;
+  }
+
+  // Remove and return the last element
+  pop(): T | undefined {
+    if (this.size === 0) return undefined;
+    this.size--;
+    return this.array[this.size];
+  }
+
+  // Get element at index
+  get(index: number): T | undefined {
+    if (index < 0 || index >= this.size) return undefined;
+    return this.array[index];
+  }
+
+  // Set element at index
+  set(index: number, element: T): boolean {
+    if (index < 0 || index >= this.size) return false;
+    this.array[index] = element;
+    return true;
+  }
+
+  private resize(): void {
+    this.capacity *= 2;
+    const newArray = new Array(this.capacity);
+    for (let i = 0; i < this.size; i++) {
+      newArray[i] = this.array[i];
+    }
+    this.array = newArray;
+  }
+}
+```
+
+## Time Complexity
+
+| Operation | Time Complexity |
+| --------- | --------------- |
+| Access    | O(1)            |
+| Search    | O(n)            |
+| Insertion | O(1) amortized  |
+| Deletion  | O(n)            |
+
+## Space Complexity
+
+- **Worst Case**: O(n)
+- **Best Case**: O(1)
+
+## Applications
+
+1. **Dynamic Lists**: When the size of the list is unknown
+2. **Buffer Management**: For handling variable-sized data
+3. **String Operations**: For string manipulation and processing
+4. **Memory Management**: In operating systems for memory allocation

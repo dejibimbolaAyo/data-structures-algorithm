@@ -4,39 +4,118 @@
       "id": "linear",
       "title": "1. Linear Data Structures",
       "description": "Structures where elements are arranged sequentially.",
+      "enabled": true,
       "items": [
-        "Array",
-        "Dynamic Array (e.g., Vector, ArrayList)",
-        "Linked List",
-        "Doubly Linked List",
-        "Circular Linked List",
-        "Stack",
-        "Queue",
-        "Circular Queue",
-        "Deque (Double-ended queue)",
-        "Bit Array / Bit Vector",
-        "Gap Buffer",
-        "Zipper"
+        {
+          "id": "array",
+          "title": "Array",
+          "enabled": true
+        },
+        {
+          "id": "dynamic-array",
+          "title": "Dynamic Array (e.g., Vector, ArrayList)",
+          "enabled": true
+        },
+        {
+          "id": "linked-list",
+          "title": "Linked List",
+          "enabled": false
+        },
+        {
+          "id": "doubly-linked-list",
+          "title": "Doubly Linked List",
+          "enabled": false
+        },
+        {
+          "id": "circular-linked-list",
+          "title": "Circular Linked List",
+          "enabled": false
+        },
+        {
+          "id": "stack",
+          "title": "Stack",
+          "enabled": false
+        },
+        {
+          "id": "queue",
+          "title": "Queue",
+          "enabled": false
+        },
+        {
+          "id": "circular-queue",
+          "title": "Circular Queue",
+          "enabled": false
+        },
+        {
+          "id": "deque",
+          "title": "Deque (Double-ended queue)",
+          "enabled": false
+        },
+        {
+          "id": "bit-array",
+          "title": "Bit Array / Bit Vector",
+          "enabled": false
+        },
+        {
+          "id": "gap-buffer",
+          "title": "Gap Buffer",
+          "enabled": false
+        },
+        {
+          "id": "zipper",
+          "title": "Zipper",
+          "enabled": false
+        }
       ]
     },
     {
       "id": "hash",
       "title": "2. Hash-Based Structures",
       "description": "Use hashing functions for quick lookups and inserts.",
+      "enabled": false,
       "items": [
-        "Hash Table / Hash Map",
-        "Hash Set",
-        "Multimap",
-        "Multiset (Bag)",
-        "Bloom Filter",
-        "LRU Cache (usually implemented with HashMap + LinkedList)",
-        "LFU Cache (uses HashMap + Heap or similar structures)"
+        {
+          "id": "hash-table",
+          "title": "Hash Table / Hash Map",
+          "enabled": false
+        },
+        {
+          "id": "hash-set",
+          "title": "Hash Set",
+          "enabled": false
+        },
+        {
+          "id": "multimap",
+          "title": "Multimap",
+          "enabled": false
+        },
+        {
+          "id": "multiset",
+          "title": "Multiset (Bag)",
+          "enabled": false
+        },
+        {
+          "id": "bloom-filter",
+          "title": "Bloom Filter",
+          "enabled": false
+        },
+        {
+          "id": "lru-cache",
+          "title": "LRU Cache",
+          "enabled": false
+        },
+        {
+          "id": "lfu-cache",
+          "title": "LFU Cache",
+          "enabled": false
+        }
       ]
     },
     {
       "id": "tree",
       "title": "3. Tree-Based Structures",
       "description": "Hierarchical data storage for fast searching, sorting, and indexing.",
+      "enabled": false,
       "subcategories": [
         {
           "id": "general-trees",
@@ -113,6 +192,7 @@
       "id": "heap",
       "title": "4. Heap-Based Structures",
       "description": "Specialized trees for priority operations.",
+      "enabled": false,
       "items": [
         "Min Heap / Max Heap",
         "Binary Heap",
@@ -128,6 +208,7 @@
       "id": "graph",
       "title": "5. Graph-Based Structures",
       "description": "Used to model networks, dependencies, and relationships.",
+      "enabled": false,
       "items": [
         "Graph (Adjacency List / Matrix)",
         "Directed Graph",
@@ -143,12 +224,14 @@
       "id": "set",
       "title": "6. Set-Based Structures",
       "description": "Focus on uniqueness, membership, and fast operations.",
+      "enabled": false,
       "items": ["Set / HashSet", "Multiset", "Bit Set", "Bloom Filter"]
     },
     {
       "id": "specialized",
       "title": "7. Specialized / Composite Structures",
       "description": "These combine or optimize existing structures:",
+      "enabled": false,
       "items": [
         "Union-Find / Disjoint Set",
         "Skip List",
@@ -165,6 +248,7 @@
       "id": "adt",
       "title": "8. Abstract Data Types (ADTs)",
       "description": "Not concrete structures, but blueprints that can be implemented in various ways:",
+      "enabled": false,
       "items": [
         "List",
         "Stack",
