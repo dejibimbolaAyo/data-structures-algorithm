@@ -1,10 +1,28 @@
-export function RunningTime() {
+type RunningTimes = {
+  access?: string;
+  search?: string;
+  insert?: string;
+  delete?: string;
+  [key: string]: string | undefined;
+};
+
+export function RunningTimeTable({ times }: { times: RunningTimes }) {
   return (
-    <div className="bg-emerald-100 dark:bg-emerald-900 rounded-lg p-4">
-      <h3 className="text-lg font-semibold text-emerald-900 dark:text-emerald-50">
-        Running Time
-      </h3>
-      {/* Content will be added later */}
-    </div>
+    <table className="my-4 border-collapse w-full text-sm">
+      <thead>
+        <tr>
+          <th className="border-b p-2 text-left">Operation</th>
+          <th className="border-b p-2 text-left">Time Complexity</th>
+        </tr>
+      </thead>
+      <tbody>
+        {Object.entries(times).map(([op, time]) => (
+          <tr key={op}>
+            <td className="p-2">{op.charAt(0).toUpperCase() + op.slice(1)}</td>
+            <td className="p-2 font-mono">{time}</td>
+          </tr>
+        ))}
+      </tbody>
+    </table>
   );
 }

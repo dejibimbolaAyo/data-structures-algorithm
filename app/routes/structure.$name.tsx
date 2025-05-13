@@ -8,13 +8,16 @@ import { remarkCodeHike, recmaCodeHike } from "codehike/mdx";
 import { bundleMDX } from "mdx-bundler";
 import { getMDXComponent } from "mdx-bundler/client";
 import remarkGfm from "remark-gfm";
+import remarkMdx from "remark-mdx";
 import remarkMermaid from "remark-mermaid";
 
 import { Code } from "@/content/components/Code";
 import { CodeSwitcher } from "@/content/components/CodeSwitcher";
+import { InteractiveRunningTimeGraph } from "@/content/components/InteractiveRunningTimeGraph";
 import { Mermaid } from "@/content/components/Mermaid";
-import { RunningTime } from "@/content/components/RunningTime";
-
+import { RunningTimeTable } from "@/content/components/RunningTime";
+import { RunningTimeGraph } from "@/content/components/RunningTimeGraph";
+import { ArrayVisualizer } from "@/content/components/visualizers/ArrayVisualizer";
 const chConfig = {
   components: { code: "Code" },
   syntaxHighlighting: {
@@ -34,10 +37,12 @@ export async function loader({ params }: LoaderFunctionArgs) {
     const { code, frontmatter } = await bundleMDX({
       file: mdxFile,
       cwd: process.cwd(),
+      // Also allow import and calling functions
       mdxOptions(options) {
         options.remarkPlugins = [
           ...(options.remarkPlugins ?? []),
           remarkGfm,
+          remarkMdx,
           remarkMermaid,
           [remarkCodeHike, chConfig],
         ];
@@ -64,8 +69,11 @@ const components = {
   ),
   Code: Code,
   CodeSwitcher: CodeSwitcher,
-  RunningTime: RunningTime,
+  RunningTimeTable: RunningTimeTable,
+  RunningTimeGraph: RunningTimeGraph,
+  InteractiveRunningTimeGraph: InteractiveRunningTimeGraph,
   Mermaid: Mermaid,
+  ArrayVisualizer: ArrayVisualizer,
 };
 
 export default function Structure() {

@@ -7,6 +7,8 @@ headers:
   Cache-Control: no-cache
 ---
 
+import { generateGrowthData } from "@/lib/generatateGrowthData";
+
 # Arrays
 
 A fixed-size collection of elements of the same type stored in contiguous memory locations.
@@ -57,3 +59,25 @@ const length = fruits.length; // 3
 3. **Matrix Operations**: Representing 2D data structures
 4. **String Operations**: Character arrays for string manipulation
 5. **Lookup Tables**: Fast access to pre-computed values
+
+<RunningTimeGraph
+  label="Standard Access Time"
+  data={generateGrowthData("O(1)", 1000)}
+/>
+
+<RunningTimeGraph
+  label="Standard Search Time"
+  data={generateGrowthData("O(n)", 1000)}
+/>
+
+<RunningTimeGraph
+  label="Standard Insertion Time"
+  data={generateGrowthData("O(n)", 1000)}
+/>
+
+<RunningTimeGraph
+  label="Standard Deletion Time"
+  data={generateGrowthData("O(n)", 1000)}
+/>
+
+<ArrayVisualizer />
