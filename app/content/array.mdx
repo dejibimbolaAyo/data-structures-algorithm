@@ -19,174 +19,21 @@ A fixed-size collection of elements of the same type stored in contiguous memory
 - **Homogeneous**: All elements must be of the same type
 - **Random Access**: O(1) time complexity for accessing elements
 
-```js
-const lorem = ipsum(dolor, sit);
-// !mark
-const [amet, consectetur] = [0, 0];
-lorem.adipiscing((sed, elit) => {
-  if (sed) {
-    //  !mark[/amet/] pink
-    amet += elit;
-  }
-});
-```
-
 ## Common Operations
 
-```java
-public class Main {
-  public static int factorial(int n) {
-    if (n == 0) {
-      return 1;
-    } else {
-      return n * factorial(n - 1);
-    }
-  }
-}
-```
+```typescript
+// Creating an array
+const numbers = new Array(5); // Creates an array of size 5
+const fruits = ["apple", "banana", "orange"]; // Array literal
 
-<CodeSwitcher>
+// Accessing elements
+const firstFruit = fruits[0]; // 'apple'
 
-```java !!
-public class Main {
-  public static int factorial(int n) {
-    if (n == 0) {
-      return 1;
-    } else {
-      return n * factorial(n - 1);
-    }
-  }
-}
-```
+// Modifying elements
+fruits[1] = "grape"; // ['apple', 'grape', 'orange']
 
-```cpp !!
-int factorial(int n) {
-  if (n == 0) {
-    return 1;
-  } else {
-    return n * factorial(n - 1);
-  }
-}
-```
-
-```scala !!
-object Main {
-  def factorial(n: Int): Int = {
-    if (n == 0) {
-      return 1
-    } else {
-      return n * factorial(n - 1)
-    }
-  }
-}
-```
-
-```py !!
-def factorial(n):
-  if n == 0:
-    return 1
-  else:
-    return n * factorial(n - 1)
-```
-
-```matlab !!
-function result = factorial(n)
-  if n == 0
-    result = 1;
-  else
-    result = n * factorial(n - 1);
-  end
-end
-```
-
-```js !!
-function factorial(n) {
-  if (n === 0) {
-    return 1;
-  } else {
-    return n * factorial(n - 1);
-  }
-}
-```
-
-```kotlin !!
-fun factorial(n: Int): Int {
-  return if (n == 0) {
-    1
-  } else {
-    n * factorial(n - 1)
-  }
-}
-```
-
-```go !!
-func factorial(n int) int {
-  if n == 0 {
-    return 1
-  } else {
-    return n * factorial(n - 1)
-  }
-}
-```
-
-```swift !!
-func factorial(n: Int) -> Int {
-  if n == 0 {
-    return 1
-  } else {
-    return n * factorial(n: n - 1)
-  }
-}
-```
-
-```rust !!
-fn factorial(n: i32) -> i32 {
-  if n == 0 {
-    return 1;
-  } else {
-    return n * factorial(n - 1);
-  }
-}
-```
-
-```fsharp !!
-let rec factorial n =
-  if n = 0 then
-    1
-  else
-    n * factorial (n - 1)
-```
-
-</CodeSwitcher>
-
-```js
-function lorem(ipsum, dolor = 1) {
-  const sit = ipsum == null ? 0 : ipsum.sit;
-  // !diff -
-  dolor = ipsum - sit;
-  dolor = ipsum - sit;
-  dolor = ipsum - sit;
-  dolor = ipsum - sit;
-  dolor = ipsum - sit;
-  // !diff +
-  dolor = sit - amet(dolor);
-  dolor = sit - amet(dolor);
-  dolor = sit - amet(dolor);
-  dolor = sit - amet(dolor);
-  dolor = sit - amet(dolor);
-  return sit ? consectetur(ipsum) : [];
-}
-```
-
-```js
-const lorem = ipsum(dolor, sit);
-// !callout[/amet/] This is a callout
-const [amet, consectetur] = [0, 0];
-lorem.adipiscing((sed, elit) => {
-  if (sed) {
-    amet += elit;
-  }
-});
+// Array length
+const length = fruits.length; // 3
 ```
 
 ## Time Complexity
@@ -197,11 +44,6 @@ lorem.adipiscing((sed, elit) => {
 | Search    | O(n)            |
 | Insertion | O(n)            |
 | Deletion  | O(n)            |
-
-| Header 1 | Header 2 |
-| -------- | -------- |
-| Cell 1   | Cell 2   |
-| Cell 3   | Cell 4   |
 
 ## Space Complexity
 
@@ -215,21 +57,3 @@ lorem.adipiscing((sed, elit) => {
 3. **Matrix Operations**: Representing 2D data structures
 4. **String Operations**: Character arrays for string manipulation
 5. **Lookup Tables**: Fast access to pre-computed values
-
-<RunningTime />
-
-<Mermaid
-  chart={`
-    pie title NETFLIX
-         "Time spent looking for movie" : 90
-         "Time spent watching it" : 10
-`}
-/>
-
-<Mermaid
-  chart={`graph TD;
-  A-->B;
-  A-->C;
-  B-->D;
-  C-->D;`}
-/>
