@@ -13,6 +13,11 @@
   "dependencies": {
     "@heroicons/react": "^2.2.0",
     "@mdx-js/esbuild": "^3.1.0",
+    "@netlify/edge-functions": "^2.3.1",
+    "@netlify/functions": "^2.6.0",
+    "@netlify/remix-adapter": "^2.3.1",
+    "@netlify/remix-edge-adapter": "^3.2.1",
+    "@netlify/remix-runtime": "^2.2.0",
     "@radix-ui/react-select": "^2.2.4",
     "@remix-run/css-bundle": "^2.16.6",
     "@remix-run/node": "^2.16.6",
