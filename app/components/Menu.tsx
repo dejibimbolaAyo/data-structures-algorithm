@@ -1,5 +1,7 @@
 import { useState, useCallback } from "react";
+
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
+
 import { MenuItem } from "@components/MenuItem";
 import menuData from "@data/menu.json";
 

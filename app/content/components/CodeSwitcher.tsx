@@ -1,5 +1,7 @@
-import { HighlightedCode, RawCode, highlight } from "codehike/code";
 import { useEffect, useState } from "react";
+
+import { HighlightedCode, RawCode, highlight } from "codehike/code";
+
 import { Code } from "@/content/components/Code";
 import { CodeSkeleton } from "@/content/components/CodeSkeleton";
 

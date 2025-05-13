@@ -1,16 +1,19 @@
 import React from "react";
-import { json, type LoaderFunctionArgs } from "@remix-run/node";
+
 import path from "path";
+
+import { json, type LoaderFunctionArgs } from "@remix-run/node";
 import { useLoaderData } from "@remix-run/react";
-import { RunningTime } from "@/content/components/RunningTime";
-import { Mermaid } from "@/content/components/Mermaid";
+import { remarkCodeHike, recmaCodeHike } from "codehike/mdx";
 import { bundleMDX } from "mdx-bundler";
 import { getMDXComponent } from "mdx-bundler/client";
 import remarkGfm from "remark-gfm";
 import remarkMermaid from "remark-mermaid";
-import { remarkCodeHike, recmaCodeHike } from "codehike/mdx";
+
 import { Code } from "@/content/components/Code";
 import { CodeSwitcher } from "@/content/components/CodeSwitcher";
+import { Mermaid } from "@/content/components/Mermaid";
+import { RunningTime } from "@/content/components/RunningTime";
 
 const chConfig = {
   components: { code: "Code" },

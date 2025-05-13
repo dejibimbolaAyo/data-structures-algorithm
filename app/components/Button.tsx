@@ -1,7 +1,6 @@
-"use client";
+import { useState } from "react";
 
 import { ClipboardDocumentIcon, CheckIcon } from "@heroicons/react/24/outline";
-import { useState } from "react";
 
 export function CopyButton({ text }: Readonly<{ text: string }>) {
   const [copied, setCopied] = useState(false);

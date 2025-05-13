@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+
 import {
   InlineAnnotation,
   AnnotationHandler,
@@ -10,6 +11,7 @@ import {
   HighlightedCode,
   InnerToken,
 } from "codehike/code";
+
 import { CopyButton } from "@/components/Button";
 import {
   Select,

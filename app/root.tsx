@@ -1,5 +1,4 @@
 import { cssBundleHref } from "@remix-run/css-bundle";
-import type { LinksFunction } from "@remix-run/node";
 import {
   Links,
   Meta,
@@ -8,9 +7,12 @@ import {
   ScrollRestoration,
   useRouteError,
 } from "@remix-run/react";
-import { ThemeProvider } from "./context/ThemeContext";
-import { ThemeToggle } from "./components/ThemeToggle";
+
 import { Menu } from "./components/Menu";
+import { ThemeToggle } from "./components/ThemeToggle";
+import { ThemeProvider } from "./context/ThemeContext";
+
+import type { LinksFunction } from "@remix-run/node";
 import "./tailwind.css";
 
 export const links: LinksFunction = () => [
