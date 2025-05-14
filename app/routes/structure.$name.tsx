@@ -28,6 +28,8 @@ const chConfig = {
 export async function loader({ params }: LoaderFunctionArgs) {
   const { name } = params;
 
+  console.log("name", name);
+
   if (!name) {
     throw new Response("Not Found", { status: 404 });
   }
