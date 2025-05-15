@@ -1,5 +1,3 @@
-import { generateGrowthData } from "../lib/generateGrowthData";
-
 # Arrays
 
 A fixed-size collection of elements of the same type stored in contiguous memory locations.
@@ -53,22 +51,26 @@ const length = fruits.length; // 3
 
 <RunningTimeGraph
   label="Standard Access Time"
-  data={generateGrowthData("O(1)", 1000)}
+  complexityType="O(1)"
+  maxN={1000}
 />
 
 <RunningTimeGraph
   label="Standard Search Time"
-  data={generateGrowthData("O(n)", 1000)}
+  complexityType="O(n)"
+  maxN={1000}
 />
 
 <RunningTimeGraph
   label="Standard Insertion Time"
-  data={generateGrowthData("O(n)", 1000)}
+  complexityType="O(n)"
+  maxN={1000}
 />
 
 <RunningTimeGraph
   label="Standard Deletion Time"
-  data={generateGrowthData("O(n)", 1000)}
+  complexityType="O(n)"
+  maxN={1000}
 />
 
 <ArrayVisualizer />

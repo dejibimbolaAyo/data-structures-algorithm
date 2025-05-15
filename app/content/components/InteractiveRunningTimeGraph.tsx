@@ -7,7 +7,7 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select";
-import { generateGrowthData, ComplexityType } from "@/lib/generateGrowthData";
+import { ComplexityType } from "@/types/complexity";
 
 import { RunningTimeGraph } from "./RunningTimeGraph";
 
@@ -61,7 +61,8 @@ export function InteractiveRunningTimeGraph() {
       </div>
       <RunningTimeGraph
         label={`${selected} Growth`}
-        data={generateGrowthData(selected, maxN)}
+        complexityType={selected}
+        maxN={maxN}
       />
     </div>
   );
