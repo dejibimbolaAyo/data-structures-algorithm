@@ -7,7 +7,7 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select";
-import { generateGrowthData, ComplexityType } from "@/lib/generatateGrowthData";
+import { generateGrowthData, ComplexityType } from "@/lib/generateGrowthData";
 
 import { RunningTimeGraph } from "./RunningTimeGraph";
 
