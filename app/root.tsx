@@ -26,6 +26,10 @@ export default function App() {
     typeof process !== "undefined" && process.env.BUILD_TIME
       ? process.env.BUILD_TIME
       : new Date().toISOString();
+  const commitHash =
+    typeof process !== "undefined" && process.env.COMMIT_HASH
+      ? process.env.COMMIT_HASH
+      : "unknown";
   return (
     <html lang="en" className="h-full">
       <head>
@@ -35,7 +39,9 @@ export default function App() {
         <Links />
         <script
           dangerouslySetInnerHTML={{
-            __html: `window.BUILD_TIME = ${JSON.stringify(buildTime)};`,
+            __html: `window.BUILD_TIME = ${JSON.stringify(
+              buildTime
+            )}; window.COMMIT_HASH = ${JSON.stringify(commitHash)};`,
           }}
         />
       </head>

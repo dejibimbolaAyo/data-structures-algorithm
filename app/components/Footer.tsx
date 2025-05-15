@@ -3,14 +3,17 @@ import { useEffect, useState } from "react";
 declare global {
   interface Window {
     BUILD_TIME?: string;
+    COMMIT_HASH?: string;
   }
 }
 
 export function Footer() {
   const [buildTime, setBuildTime] = useState<string | null>(null);
+  const [commitHash, setCommitHash] = useState<string | null>(null);
   useEffect(() => {
-    if (typeof window !== "undefined" && window.BUILD_TIME) {
-      setBuildTime(window.BUILD_TIME);
+    if (typeof window !== "undefined") {
+      if (window.BUILD_TIME) setBuildTime(window.BUILD_TIME);
+      if (window.COMMIT_HASH) setCommitHash(window.COMMIT_HASH);
     }
   }, []);
 
@@ -32,6 +35,8 @@ export function Footer() {
         <div className="text-xs text-slate-400">
           Build time:{" "}
           {buildTime ? new Date(buildTime).toUTCString() : "unknown"}
+          {" | Commit: "}
+          {commitHash ? commitHash.substring(0, 7) : "unknown"}
         </div>
       </footer>
     </div>
