@@ -8,3 +8,4 @@
 I added netlifyPlugin in my vite config
 Update the toml file
 Updated the build and dev command (I think the build is most important)
+[-] issues with .data - remix server data fetching

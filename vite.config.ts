@@ -28,7 +28,7 @@ export default defineConfig({
         v3_lazyRouteDiscovery: true,
       },
     }),
-    tsconfigPaths(),
     netlifyPlugin(),
+    tsconfigPaths(),
   ],
 });
