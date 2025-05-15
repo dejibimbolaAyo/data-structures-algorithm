@@ -8,6 +8,7 @@ import {
   useRouteError,
 } from "@remix-run/react";
 
+import { Footer } from "./components/Footer";
 import { Menu } from "./components/Menu";
 import { ThemeToggle } from "./components/ThemeToggle";
 import { ThemeProvider } from "./context/ThemeContext";
@@ -15,13 +16,16 @@ import { ThemeProvider } from "./context/ThemeContext";
 import type { LinksFunction } from "@remix-run/node";
 
 import "./tailwind.css";
-import { Footer } from "./components/Footer";
 
 export const links: LinksFunction = () => [
   ...(cssBundleHref ? [{ rel: "stylesheet", href: cssBundleHref }] : []),
 ];
 
 export default function App() {
+  const buildTime =
+    typeof process !== "undefined" && process.env.BUILD_TIME
+      ? process.env.BUILD_TIME
+      : new Date().toISOString();
   return (
     <html lang="en" className="h-full">
       <head>
@@ -29,6 +33,11 @@ export default function App() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <Meta />
         <Links />
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `window.BUILD_TIME = ${JSON.stringify(buildTime)};`,
+          }}
+        />
       </head>
       <body className="h-full bg-emerald-50 dark:bg-emerald-1000">
         <ThemeProvider>
