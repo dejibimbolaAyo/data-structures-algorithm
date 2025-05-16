@@ -14,7 +14,7 @@
         {
           "id": "dynamic-array",
           "title": "Dynamic Array (e.g., Vector, ArrayList)",
-          "enabled": true
+          "enabled": false
         },
         {
           "id": "linked-list",
