@@ -1,0 +1,99 @@
+# Queue
+
+A linear data structure that follows the First-In-First-Out (FIFO) principle, where elements are added at the rear and removed from the front.
+
+## Key Characteristics
+
+- **FIFO Order**: First element added is the first to be removed
+- **Two Ends**: Front (for removal) and Rear (for insertion)
+- **Fixed Capacity**: Can be implemented with a fixed size
+- **Dynamic Size**: Can also be implemented with dynamic sizing
+- **No Random Access**: Elements can only be accessed from the front
+
+## Common Operations
+
+```typescript
+// Queue implementation using an array
+class Queue {
+  private items: number[] = [];
+  private front: number = 0;
+  private rear: number = -1;
+  private size: number = 0;
+
+  // Enqueue (add) an element
+  enqueue(value: number): void {
+    this.rear++;
+    this.items[this.rear] = value;
+    this.size++;
+  }
+
+  // Dequeue (remove) an element
+  dequeue(): number | undefined {
+    if (this.isEmpty()) return undefined;
+
+    const item = this.items[this.front];
+    this.front++;
+    this.size--;
+    return item;
+  }
+
+  // Check if queue is empty
+  isEmpty(): boolean {
+    return this.size === 0;
+  }
+
+  // Get the front element
+  peek(): number | undefined {
+    if (this.isEmpty()) return undefined;
+    return this.items[this.front];
+  }
+}
+```
+
+## Time Complexity
+
+| Operation | Time Complexity |
+| --------- | --------------- |
+| Enqueue   | O(1)            |
+| Dequeue   | O(1)            |
+| Peek      | O(1)            |
+| Search    | O(n)            |
+
+## Space Complexity
+
+- **Worst Case**: O(n)
+- **Best Case**: O(1)
+
+## Applications
+
+1. **Task Scheduling**: Process scheduling in operating systems
+2. **Print Queue**: Managing print jobs
+3. **Message Queues**: Inter-process communication
+4. **Breadth-First Search**: Graph traversal
+5. **Event Handling**: Event-driven programming
+
+<RunningTimeGraph
+  label="Standard Enqueue Time"
+  complexityType="O(1)"
+  maxN={1000}
+/>
+
+<RunningTimeGraph
+  label="Standard Dequeue Time"
+  complexityType="O(1)"
+  maxN={1000}
+/>
+
+<RunningTimeGraph
+  label="Standard Peek Time"
+  complexityType="O(1)"
+  maxN={1000}
+/>
+
+<RunningTimeGraph
+  label="Standard Search Time"
+  complexityType="O(n)"
+  maxN={1000}
+/>
+
+<QueueVisualizer />

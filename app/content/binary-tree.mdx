@@ -1,0 +1,115 @@
+# Binary Tree
+
+A hierarchical data structure where each node has at most two children, referred to as left and right children. Unlike a Binary Search Tree, there are no ordering constraints on the values.
+
+## Key Characteristics
+
+- **Hierarchical Structure**: Each node can have up to two children
+- **Left and Right Children**: Nodes are organized in a left-right pattern
+- **Root Node**: The topmost node in the tree
+- **Leaf Nodes**: Nodes without any children
+- **Parent-Child Relationship**: Each node (except root) has exactly one parent
+- **No Ordering Constraints**: Values can be placed in any position
+
+## Common Operations
+
+```typescript
+// Node structure
+interface BinaryTreeNode {
+  value: number;
+  left?: BinaryTreeNode;
+  right?: BinaryTreeNode;
+}
+
+// Creating a node
+const node = { value: 10 };
+
+// Inserting a value at a specific position
+function insert(
+  root: BinaryTreeNode,
+  value: number,
+  position: "left" | "right"
+): BinaryTreeNode {
+  if (!root) return { value };
+
+  // If the position is empty, insert here
+  if (position === "left" && !root.left) {
+    root.left = { value };
+    return root;
+  }
+  if (position === "right" && !root.right) {
+    root.right = { value };
+    return root;
+  }
+
+  // If position is taken, try next level
+  if (position === "left") {
+    root.left = insert(root.left || { value }, value, position);
+  } else {
+    root.right = insert(root.right || { value }, value, position);
+  }
+
+  return root;
+}
+
+// Searching for a value (checks both subtrees)
+function search(root: BinaryTreeNode, value: number): BinaryTreeNode | null {
+  if (!root) return null;
+
+  if (root.value === value) return root;
+
+  // Search in both subtrees
+  const leftResult = search(root.left, value);
+  if (leftResult) return leftResult;
+
+  return search(root.right, value);
+}
+```
+
+## Time Complexity
+
+| Operation | Time Complexity |
+| --------- | --------------- |
+| Access    | O(n)            |
+| Search    | O(n)            |
+| Insertion | O(n)            |
+| Deletion  | O(n)            |
+
+## Space Complexity
+
+- **Worst Case**: O(n)
+- **Best Case**: O(1)
+
+## Applications
+
+1. **Expression Trees**: Representing mathematical expressions
+2. **Decision Trees**: Decision-making processes
+3. **File Systems**: Directory structures
+4. **Game Trees**: Game state representation
+5. **Syntax Trees**: Compiler implementation
+
+<RunningTimeGraph
+  label="Standard Access Time"
+  complexityType="O(n)"
+  maxN={1000}
+/>
+
+<RunningTimeGraph
+  label="Standard Search Time"
+  complexityType="O(n)"
+  maxN={1000}
+/>
+
+<RunningTimeGraph
+  label="Standard Insertion Time"
+  complexityType="O(n)"
+  maxN={1000}
+/>
+
+<RunningTimeGraph
+  label="Standard Deletion Time"
+  complexityType="O(n)"
+  maxN={1000}
+/>
+
+<BinaryTreeVisualizer />

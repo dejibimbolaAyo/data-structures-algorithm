@@ -1,0 +1,91 @@
+# Stack
+
+A linear data structure that follows the Last-In-First-Out (LIFO) principle, where elements are added and removed from the same end (top).
+
+## Key Characteristics
+
+- **LIFO Order**: Last element added is the first to be removed
+- **Single Access Point**: All operations happen at the top
+- **Fixed Capacity**: Can be implemented with a fixed size
+- **Dynamic Size**: Can also be implemented with dynamic sizing
+- **No Random Access**: Elements can only be accessed from the top
+
+## Common Operations
+
+```typescript
+// Stack implementation using an array
+class Stack {
+  private items: number[] = [];
+  private top: number = -1;
+
+  // Push an element onto the stack
+  push(value: number): void {
+    this.top++;
+    this.items[this.top] = value;
+  }
+
+  // Pop an element from the stack
+  pop(): number | undefined {
+    if (this.isEmpty()) return undefined;
+
+    const item = this.items[this.top];
+    this.top--;
+    return item;
+  }
+
+  // Check if stack is empty
+  isEmpty(): boolean {
+    return this.top === -1;
+  }
+
+  // Get the top element
+  peek(): number | undefined {
+    if (this.isEmpty()) return undefined;
+    return this.items[this.top];
+  }
+}
+```
+
+## Time Complexity
+
+| Operation | Time Complexity |
+| --------- | --------------- |
+| Push      | O(1)            |
+| Pop       | O(1)            |
+| Peek      | O(1)            |
+| Search    | O(n)            |
+
+## Space Complexity
+
+- **Worst Case**: O(n)
+- **Best Case**: O(1)
+
+## Applications
+
+1. **Function Calls**: Call stack in programming languages
+2. **Expression Evaluation**: Postfix notation
+3. **Undo Operations**: Command history
+4. **Browser History**: Back button functionality
+5. **Depth-First Search**: Graph traversal
+
+<RunningTimeGraph
+  label="Standard Push Time"
+  complexityType="O(1)"
+  maxN={1000}
+/>
+
+<RunningTimeGraph label="Standard Pop Time" complexityType="O(1)" maxN={1000} />
+
+<RunningTimeGraph
+  label="Standard Peek Time"
+  complexityType="O(1)"
+  maxN={1000}
+/>
+
+<RunningTimeGraph
+  label="Standard Search Time"
+  complexityType="O(n)"
+  maxN={1000}
+/>
+
+<UndoRedoTextEditor />

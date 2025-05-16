@@ -1,0 +1,97 @@
+# N-ary Tree
+
+A tree data structure where each node can have any number of children, unlike binary trees which are limited to two children per node.
+
+## Key Characteristics
+
+- **Multiple Children**: Each node can have any number of children
+- **Hierarchical Structure**: Parent-child relationships
+- **Root Node**: The topmost node in the tree
+- **Leaf Nodes**: Nodes without any children
+- **Flexible Structure**: No limit on number of children
+
+## Common Operations
+
+```typescript
+// Node structure
+interface NaryTreeNode {
+  value: number;
+  children: NaryTreeNode[];
+}
+
+// Creating a node
+const node = { value: 10, children: [] };
+
+// Adding a child
+function addChild(parent: NaryTreeNode, value: number): void {
+  parent.children.push({ value, children: [] });
+}
+
+// Searching for a value
+function search(root: NaryTreeNode, value: number): NaryTreeNode | null {
+  if (root.value === value) return root;
+
+  for (const child of root.children) {
+    const result = search(child, value);
+    if (result) return result;
+  }
+
+  return null;
+}
+
+// Traversing the tree
+function traverse(root: NaryTreeNode): void {
+  console.log(root.value);
+  for (const child of root.children) {
+    traverse(child);
+  }
+}
+```
+
+## Time Complexity
+
+| Operation | Time Complexity |
+| --------- | --------------- |
+| Access    | O(n)            |
+| Search    | O(n)            |
+| Insertion | O(1)            |
+| Deletion  | O(n)            |
+
+## Space Complexity
+
+- **Worst Case**: O(n)
+- **Best Case**: O(1)
+
+## Applications
+
+1. **File Systems**: Directory structures
+2. **Organization Charts**: Company hierarchies
+3. **XML/HTML**: Document Object Model (DOM)
+4. **Game Trees**: Game state representation
+5. **Decision Trees**: Decision-making processes
+
+<RunningTimeGraph
+  label="Standard Access Time"
+  complexityType="O(n)"
+  maxN={1000}
+/>
+
+<RunningTimeGraph
+  label="Standard Search Time"
+  complexityType="O(n)"
+  maxN={1000}
+/>
+
+<RunningTimeGraph
+  label="Standard Insertion Time"
+  complexityType="O(1)"
+  maxN={1000}
+/>
+
+<RunningTimeGraph
+  label="Standard Deletion Time"
+  complexityType="O(n)"
+  maxN={1000}
+/>
+
+<NAryFolder type="large" />

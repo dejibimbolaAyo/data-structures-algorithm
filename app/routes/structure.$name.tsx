@@ -17,7 +17,14 @@ import { InteractiveRunningTimeGraph } from "@/content/components/InteractiveRun
 import { Mermaid } from "@/content/components/Mermaid";
 import { RunningTimeTable } from "@/content/components/RunningTime";
 import { RunningTimeGraph } from "@/content/components/RunningTimeGraph";
+import { BinarySearchTreeVisualizer } from "@/content/components/usecases/BinarySearchTreeVisualizer";
+import { BinaryTreeVisualizer } from "@/content/components/usecases/BinaryTreeVisualizer";
+import { LinkedListVisualizer } from "@/content/components/usecases/LinkedListVisualizer";
+import { NAryFolder } from "@/content/components/usecases/NAryFolder";
+import { QueueVisualizer } from "@/content/components/usecases/QueueVisualizer";
+import { UndoRedoTextEditor } from "@/content/components/usecases/UndoRedoTextEditor";
 import { ArrayVisualizer } from "@/content/components/visualizers/ArrayVisualizer";
+
 const chConfig = {
   components: { code: "Code" },
   syntaxHighlighting: {
@@ -27,8 +34,6 @@ const chConfig = {
 
 export async function loader({ params }: LoaderFunctionArgs) {
   const { name } = params;
-
-  console.log("name", name);
 
   if (!name) {
     throw new Response("Not Found", { status: 404 });
@@ -76,6 +81,12 @@ const components = {
   InteractiveRunningTimeGraph: InteractiveRunningTimeGraph,
   Mermaid: Mermaid,
   ArrayVisualizer: ArrayVisualizer,
+  UndoRedoTextEditor: UndoRedoTextEditor,
+  QueueVisualizer: QueueVisualizer,
+  LinkedListVisualizer: LinkedListVisualizer,
+  NAryFolder: NAryFolder,
+  BinaryTreeVisualizer: BinaryTreeVisualizer,
+  BinarySearchTreeVisualizer: BinarySearchTreeVisualizer,
 };
 
 export default function Structure() {

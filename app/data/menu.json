@@ -19,7 +19,17 @@
         {
           "id": "linked-list",
           "title": "Linked List",
-          "enabled": false
+          "enabled": true
+        },
+        {
+          "id": "stack",
+          "title": "Stack",
+          "enabled": true
+        },
+        {
+          "id": "queue",
+          "title": "Queue",
+          "enabled": true
         },
         {
           "id": "doubly-linked-list",
@@ -29,16 +39,6 @@
         {
           "id": "circular-linked-list",
           "title": "Circular Linked List",
-          "enabled": false
-        },
-        {
-          "id": "stack",
-          "title": "Stack",
-          "enabled": false
-        },
-        {
-          "id": "queue",
-          "title": "Queue",
           "enabled": false
         },
         {
@@ -65,6 +65,230 @@
           "id": "zipper",
           "title": "Zipper",
           "enabled": false
+        }
+      ]
+    },
+    {
+      "id": "tree",
+      "title": "3. Tree-Based Structures",
+      "description": "Hierarchical data storage for fast searching, sorting, and indexing.",
+      "enabled": true,
+      "subcategories": [
+        {
+          "id": "general-trees",
+          "title": "General Trees",
+          "items": [
+            {
+              "id": "binary-tree",
+              "title": "Binary Tree",
+              "enabled": true
+            },
+            {
+              "id": "n-ary-tree",
+              "title": "N-ary Tree",
+              "enabled": true
+            },
+            {
+              "id": "trinary-tree",
+              "title": "Trinary Tree",
+              "enabled": false
+            },
+            {
+              "id": "ternary-search-tree",
+              "title": "Ternary Search Tree",
+              "enabled": false
+            },
+            {
+              "id": "expression-tree",
+              "title": "Expression Tree",
+              "enabled": false
+            },
+            {
+              "id": "decision-tree",
+              "title": "Decision Tree",
+              "enabled": false
+            },
+            {
+              "id": "game-tree",
+              "title": "Game Tree",
+              "enabled": false
+            }
+          ]
+        },
+        {
+          "id": "search-trees",
+          "title": "Search Trees",
+          "items": [
+            {
+              "id": "binary-search-tree",
+              "title": "Binary Search Tree (BST)",
+              "enabled": true
+            },
+            {
+              "id": "avl-tree",
+              "title": "AVL Tree",
+              "enabled": false
+            },
+            {
+              "id": "red-black-tree",
+              "title": "Red-Black Tree",
+              "enabled": false
+            },
+            {
+              "id": "splay-tree",
+              "title": "Splay Tree",
+              "enabled": false
+            },
+            {
+              "id": "treap",
+              "title": "Treap",
+              "enabled": false
+            },
+            {
+              "id": "b-tree",
+              "title": "B-Tree",
+              "enabled": false
+            },
+            {
+              "id": "b-plus-tree",
+              "title": "B+ Tree",
+              "enabled": false
+            },
+            {
+              "id": "order-statistic-tree",
+              "title": "Order-Statistic Tree",
+              "enabled": false
+            },
+            {
+              "id": "patricia-trie",
+              "title": "Patricia Trie",
+              "enabled": false
+            },
+            {
+              "id": "radix-tree",
+              "title": "Radix Tree",
+              "enabled": false
+            }
+          ]
+        },
+        {
+          "id": "prefix-trees",
+          "title": "Prefix/Compressed Trees",
+          "items": [
+            {
+              "id": "trie",
+              "title": "Trie (Prefix Tree)",
+              "enabled": false
+            },
+            {
+              "id": "compressed-trie",
+              "title": "Compressed Trie",
+              "enabled": false
+            },
+            {
+              "id": "suffix-tree",
+              "title": "Suffix Tree",
+              "enabled": false
+            },
+            {
+              "id": "suffix-array",
+              "title": "Suffix Array",
+              "enabled": false
+            },
+            {
+              "id": "aho-corasick",
+              "title": "Aho-Corasick Automaton",
+              "enabled": false
+            },
+            {
+              "id": "suffix-automaton",
+              "title": "Suffix Automaton",
+              "enabled": false
+            }
+          ]
+        },
+        {
+          "id": "range-trees",
+          "title": "Range Query Trees",
+          "items": [
+            {
+              "id": "segment-tree",
+              "title": "Segment Tree",
+              "enabled": false
+            },
+            {
+              "id": "fenwick-tree",
+              "title": "Fenwick Tree (Binary Indexed Tree)",
+              "enabled": false
+            },
+            {
+              "id": "sparse-table",
+              "title": "Sparse Table",
+              "enabled": false
+            },
+            {
+              "id": "range-tree",
+              "title": "Range Tree",
+              "enabled": false
+            },
+            {
+              "id": "interval-tree",
+              "title": "Interval Tree",
+              "enabled": false
+            },
+            {
+              "id": "van-emde-boas-tree",
+              "title": "Van Emde Boas Tree",
+              "enabled": false
+            }
+          ]
+        },
+        {
+          "id": "spatial-trees",
+          "title": "Spatial Trees",
+          "items": [
+            {
+              "id": "k-d-tree",
+              "title": "K-D Tree",
+              "enabled": false
+            },
+            {
+              "id": "quadtree",
+              "title": "Quadtree",
+              "enabled": false
+            },
+            {
+              "id": "octree",
+              "title": "Octree",
+              "enabled": false
+            },
+            {
+              "id": "r-tree",
+              "title": "R-Tree",
+              "enabled": false
+            },
+            {
+              "id": "bvh",
+              "title": "Bounding Volume Hierarchy (BVH)",
+              "enabled": false
+            }
+          ]
+        },
+        {
+          "id": "functional-trees",
+          "title": "Functional Trees / Persistent",
+          "items": [
+            {
+              "id": "persistent-segment-tree",
+              "title": "Persistent Segment Tree",
+              "enabled": false
+            },
+            {
+              "id": "finger-tree",
+              "title": "Finger Tree",
+              "enabled": false
+            }
+          ]
         }
       ]
     },
@@ -112,96 +336,51 @@
       ]
     },
     {
-      "id": "tree",
-      "title": "3. Tree-Based Structures",
-      "description": "Hierarchical data storage for fast searching, sorting, and indexing.",
-      "enabled": false,
-      "subcategories": [
-        {
-          "id": "general-trees",
-          "title": "General Trees",
-          "items": [
-            "Binary Tree",
-            "N-ary Tree",
-            "Trinary Tree",
-            "Ternary Search Tree",
-            "Expression Tree",
-            "Decision Tree",
-            "Game Tree"
-          ]
-        },
-        {
-          "id": "search-trees",
-          "title": "Search Trees",
-          "items": [
-            "Binary Search Tree (BST)",
-            "AVL Tree",
-            "Red-Black Tree",
-            "Splay Tree",
-            "Treap",
-            "B-Tree",
-            "B+ Tree",
-            "Order-Statistic Tree",
-            "Patricia Trie",
-            "Radix Tree"
-          ]
-        },
-        {
-          "id": "prefix-trees",
-          "title": "Prefix/Compressed Trees",
-          "items": [
-            "Trie (Prefix Tree)",
-            "Compressed Trie",
-            "Suffix Tree",
-            "Suffix Array",
-            "Aho-Corasick Automaton",
-            "Suffix Automaton"
-          ]
-        },
-        {
-          "id": "range-trees",
-          "title": "Range Query Trees",
-          "items": [
-            "Segment Tree",
-            "Fenwick Tree (Binary Indexed Tree)",
-            "Sparse Table",
-            "Range Tree",
-            "Interval Tree",
-            "Van Emde Boas Tree"
-          ]
-        },
-        {
-          "id": "spatial-trees",
-          "title": "Spatial Trees",
-          "items": [
-            "K-D Tree",
-            "Quadtree",
-            "Octree",
-            "R-Tree",
-            "Bounding Volume Hierarchy (BVH)"
-          ]
-        },
-        {
-          "id": "functional-trees",
-          "title": "Functional Trees / Persistent",
-          "items": ["Persistent Segment Tree", "Finger Tree"]
-        }
-      ]
-    },
-    {
       "id": "heap",
       "title": "4. Heap-Based Structures",
       "description": "Specialized trees for priority operations.",
       "enabled": false,
       "items": [
-        "Min Heap / Max Heap",
-        "Binary Heap",
-        "Fibonacci Heap",
-        "Binomial Heap",
-        "Pairing Heap",
-        "Leftist Heap",
-        "Radix Heap",
-        "Double-Ended Priority Queue (DEPQ)"
+        {
+          "id": "min-max-heap",
+          "title": "Min Heap / Max Heap",
+          "enabled": false
+        },
+        {
+          "id": "binary-heap",
+          "title": "Binary Heap",
+          "enabled": false
+        },
+        {
+          "id": "fibonacci-heap",
+          "title": "Fibonacci Heap",
+          "enabled": false
+        },
+        {
+          "id": "binomial-heap",
+          "title": "Binomial Heap",
+          "enabled": false
+        },
+        {
+          "id": "pairing-heap",
+          "title": "Pairing Heap",
+          "enabled": false
+        },
+        {
+          "id": "leftist-heap",
+          "title": "Leftist Heap",
+          "enabled": false
+        },
+        {
+          "id": "radix-heap",
+          "title": "Radix Heap",
+          "enabled": false
+        },
+        {
+          "id": "depq",
+          "title": "Double-Ended Priority Queue (DEPQ)",
+          "enabled": false
+        }
       ]
     },
     {
@@ -210,14 +389,46 @@
       "description": "Used to model networks, dependencies, and relationships.",
       "enabled": false,
       "items": [
-        "Graph (Adjacency List / Matrix)",
-        "Directed Graph",
-        "Undirected Graph",
-        "Weighted Graph",
-        "Multigraph",
-        "DAG (Directed Acyclic Graph)",
-        "Compressed Sparse Row (CSR)",
-        "Incidence Matrix / List"
+        {
+          "id": "graph",
+          "title": "Graph (Adjacency List / Matrix)",
+          "enabled": false
+        },
+        {
+          "id": "directed-graph",
+          "title": "Directed Graph",
+          "enabled": false
+        },
+        {
+          "id": "undirected-graph",
+          "title": "Undirected Graph",
+          "enabled": false
+        },
+        {
+          "id": "weighted-graph",
+          "title": "Weighted Graph",
+          "enabled": false
+        },
+        {
+          "id": "multigraph",
+          "title": "Multigraph",
+          "enabled": false
+        },
+        {
+          "id": "dag",
+          "title": "DAG (Directed Acyclic Graph)",
+          "enabled": false
+        },
+        {
+          "id": "csr",
+          "title": "Compressed Sparse Row (CSR)",
+          "enabled": false
+        },
+        {
+          "id": "incidence-matrix",
+          "title": "Incidence Matrix / List",
+          "enabled": false
+        }
       ]
     },
     {
@@ -225,7 +436,28 @@
       "title": "6. Set-Based Structures",
       "description": "Focus on uniqueness, membership, and fast operations.",
       "enabled": false,
-      "items": ["Set / HashSet", "Multiset", "Bit Set", "Bloom Filter"]
+      "items": [
+        {
+          "id": "set",
+          "title": "Set / HashSet",
+          "enabled": false
+        },
+        {
+          "id": "multiset",
+          "title": "Multiset",
+          "enabled": false
+        },
+        {
+          "id": "bit-set",
+          "title": "Bit Set",
+          "enabled": false
+        },
+        {
+          "id": "bloom-filter",
+          "title": "Bloom Filter",
+          "enabled": false
+        }
+      ]
     },
     {
       "id": "specialized",
@@ -233,15 +465,51 @@
       "description": "These combine or optimize existing structures:",
       "enabled": false,
       "items": [
-        "Union-Find / Disjoint Set",
-        "Skip List",
-        "Rope (for efficiently editing large strings)",
-        "Dancing Links (DLX)",
-        "Zipper",
-        "Cuckoo Hashing Table",
-        "Deque with Min/Max",
-        "Circular Buffer",
-        "Compressed Suffix Tree / Array"
+        {
+          "id": "union-find",
+          "title": "Union-Find / Disjoint Set",
+          "enabled": false
+        },
+        {
+          "id": "skip-list",
+          "title": "Skip List",
+          "enabled": false
+        },
+        {
+          "id": "rope",
+          "title": "Rope (for efficiently editing large strings)",
+          "enabled": false
+        },
+        {
+          "id": "dancing-links",
+          "title": "Dancing Links (DLX)",
+          "enabled": false
+        },
+        {
+          "id": "zipper",
+          "title": "Zipper",
+          "enabled": false
+        },
+        {
+          "id": "cuckoo-hashing",
+          "title": "Cuckoo Hashing Table",
+          "enabled": false
+        },
+        {
+          "id": "deque-min-max",
+          "title": "Deque with Min/Max",
+          "enabled": false
+        },
+        {
+          "id": "circular-buffer",
+          "title": "Circular Buffer",
+          "enabled": false
+        },
+        {
+          "id": "compressed-suffix",
+          "title": "Compressed Suffix Tree / Array",
+          "enabled": false
+        }
       ]
     },
     {
@@ -250,15 +518,51 @@
       "description": "Not concrete structures, but blueprints that can be implemented in various ways:",
       "enabled": false,
       "items": [
-        "List",
-        "Stack",
-        "Queue",
-        "Deque",
-        "Set",
-        "Map / Dictionary",
-        "Priority Queue",
-        "Graph ADT",
-        "Tree ADT"
+        {
+          "id": "list",
+          "title": "List",
+          "enabled": false
+        },
+        {
+          "id": "stack",
+          "title": "Stack",
+          "enabled": false
+        },
+        {
+          "id": "queue",
+          "title": "Queue",
+          "enabled": false
+        },
+        {
+          "id": "deque",
+          "title": "Deque",
+          "enabled": false
+        },
+        {
+          "id": "set",
+          "title": "Set",
+          "enabled": false
+        },
+        {
+          "id": "map",
+          "title": "Map / Dictionary",
+          "enabled": false
+        },
+        {
+          "id": "priority-queue",
+          "title": "Priority Queue",
+          "enabled": false
+        },
+        {
+          "id": "graph-adt",
+          "title": "Graph ADT",
+          "enabled": false
+        },
+        {
+          "id": "tree-adt",
+          "title": "Tree ADT",
+          "enabled": false
+        }
       ]
     }
   ]

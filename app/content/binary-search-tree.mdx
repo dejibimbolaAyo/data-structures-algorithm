@@ -1,0 +1,97 @@
+# Binary Tree
+
+A hierarchical data structure where each node has at most two children, referred to as left and right children.
+
+## Key Characteristics
+
+- **Hierarchical Structure**: Each node can have up to two children
+- **Left and Right Children**: Nodes are organized in a left-right pattern
+- **Root Node**: The topmost node in the tree
+- **Leaf Nodes**: Nodes without any children
+- **Parent-Child Relationship**: Each node (except root) has exactly one parent
+
+## Common Operations
+
+```typescript
+// Node structure
+interface BinaryTreeNode {
+  value: number;
+  left?: BinaryTreeNode;
+  right?: BinaryTreeNode;
+}
+
+// Creating a node
+const node = { value: 10 };
+
+// Inserting a value
+function insert(root: BinaryTreeNode, value: number): BinaryTreeNode {
+  if (!root) return { value };
+
+  if (value < root.value) {
+    root.left = insert(root.left, value);
+  } else {
+    root.right = insert(root.right, value);
+  }
+
+  return root;
+}
+
+// Searching for a value
+function search(root: BinaryTreeNode, value: number): BinaryTreeNode | null {
+  if (!root || root.value === value) return root;
+
+  if (value < root.value) {
+    return search(root.left, value);
+  }
+
+  return search(root.right, value);
+}
+```
+
+## Time Complexity
+
+| Operation | Time Complexity |
+| --------- | --------------- |
+| Access    | O(log n)        |
+| Search    | O(log n)        |
+| Insertion | O(log n)        |
+| Deletion  | O(log n)        |
+
+## Space Complexity
+
+- **Worst Case**: O(n)
+- **Best Case**: O(log n)
+
+## Applications
+
+1. **Binary Search Trees**: Efficient searching and sorting
+2. **Expression Trees**: Representing mathematical expressions
+3. **Decision Trees**: Decision-making processes
+4. **File Systems**: Directory structures
+5. **Game Trees**: Game state representation
+
+<RunningTimeGraph
+  label="Standard Access Time"
+  complexityType="O(log n)"
+  maxN={1000}
+/>
+
+<RunningTimeGraph
+  label="Standard Search Time"
+  complexityType="O(log n)"
+  maxN={1000}
+/>
+
+<RunningTimeGraph
+  label="Standard Insertion Time"
+  complexityType="O(log n)"
+  maxN={1000}
+/>
+
+<RunningTimeGraph
+  label="Standard Deletion Time"
+  complexityType="O(log n)"
+  maxN={1000}
+/>
+
+<BinarySearchTreeVisualizer />

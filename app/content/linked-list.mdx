@@ -1,0 +1,103 @@
+# Linked List
+
+A linear data structure where elements are stored in nodes, and each node points to the next node in the sequence.
+
+## Key Characteristics
+
+- **Dynamic Size**: Can grow or shrink as needed
+- **Node-based**: Each element is stored in a node
+- **Sequential Access**: Elements are accessed sequentially
+- **Memory Efficiency**: No need for contiguous memory
+- **Flexible**: Easy to insert and delete elements
+
+## Common Operations
+
+```typescript
+// Node structure
+interface ListNode {
+  value: number;
+  next: ListNode | null;
+}
+
+// Creating a node
+const node = { value: 10, next: null };
+
+// Inserting at the beginning
+function insertAtHead(head: ListNode | null, value: number): ListNode {
+  return { value, next: head };
+}
+
+// Searching for a value
+function search(head: ListNode | null, value: number): ListNode | null {
+  let current = head;
+  while (current) {
+    if (current.value === value) return current;
+    current = current.next;
+  }
+  return null;
+}
+
+// Deleting a node
+function deleteNode(head: ListNode | null, value: number): ListNode | null {
+  if (!head) return null;
+  if (head.value === value) return head.next;
+
+  let current = head;
+  while (current.next) {
+    if (current.next.value === value) {
+      current.next = current.next.next;
+      break;
+    }
+    current = current.next;
+  }
+  return head;
+}
+```
+
+## Time Complexity
+
+| Operation | Time Complexity            |
+| --------- | -------------------------- |
+| Access    | O(n)                       |
+| Search    | O(n)                       |
+| Insertion | O(1) at head, O(n) at tail |
+| Deletion  | O(1) at head, O(n) at tail |
+
+## Space Complexity
+
+- **Worst Case**: O(n)
+- **Best Case**: O(1)
+
+## Applications
+
+1. **Memory Management**: Dynamic memory allocation
+2. **Undo Functionality**: Storing command history
+3. **Browser History**: Forward and backward navigation
+4. **Polynomial Arithmetic**: Representing polynomials
+5. **Symbol Tables**: Compiler implementation
+
+<RunningTimeGraph
+  label="Standard Access Time"
+  complexityType="O(n)"
+  maxN={1000}
+/>
+
+<RunningTimeGraph
+  label="Standard Search Time"
+  complexityType="O(n)"
+  maxN={1000}
+/>
+
+<RunningTimeGraph
+  label="Standard Insertion Time"
+  complexityType="O(n)"
+  maxN={1000}
+/>
+
+<RunningTimeGraph
+  label="Standard Deletion Time"
+  complexityType="O(n)"
+  maxN={1000}
+/>
+
+<LinkedListVisualizer />
